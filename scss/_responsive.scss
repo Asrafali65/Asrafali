@@ -1,0 +1,175 @@
+@include media-sm-max {
+  a {
+    cursor: pointer;
+  }
+
+  * {
+    cursor: auto;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+  main {
+    .main-section {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+
+      .content-wrapper {
+        margin: 100px 0;
+
+        p {
+          width: 100%;
+        }
+      }
+
+      .main-img {
+        width: 70%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .about-me {
+      // about container
+      margin-top: 30px;
+
+      // scroll text
+    .scroll-txt {
+
+      h1 {
+        left: 800px;
+      }
+    }
+      .about-me-container {
+        grid-template-columns: 1fr;
+
+        // circular text
+        .social-contact {
+          display: none;
+        }
+      }
+    }
+
+    // portfolio section
+    .portfolio {
+      // container
+      .portfolio-container {
+        width: 100%;
+
+        // section
+        section {
+          grid-template-columns: 1fr;
+
+          .img-pf {
+            width: 100%;
+            height: 70%;
+          }
+          //   content
+          .content-wrapper-portfolio {
+            width: 100%;
+
+            .title-portfolio {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// medium device
+
+@include media-md-max {
+  a {
+    cursor: pointer;
+  }
+
+  * {
+    cursor: auto;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+  main {
+    .main-section {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+
+      .content-wrapper {
+        margin: 100px 0;
+
+        p {
+          width: 100%;
+        }
+      }
+
+      .main-img {
+        width: 70%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .about-me {
+      // about container
+      .about-me-container {
+        grid-template-columns: 1fr;
+
+        // circular text
+        .social-contact {
+          display: none;
+        }
+      }
+    }
+
+    // portfolio section
+    .portfolio {
+      // container
+      .portfolio-container {
+        width: 100%;
+
+        // section
+        section {
+          grid-template-columns: 1fr;
+
+          .img-pf {
+            width: 100%;
+            height: 70%;
+          }
+          //   content
+          .content-wrapper-portfolio {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// large device
+
+@include media-lg-max {
+  main {
+    .main-section {
+      .content-wrapper {
+        h1 {
+          font-size: 3.5rem;
+        }
+      }
+
+      .main-img {
+        width: 300px;
+        justify-self: end;
+      }
+    }
+  }
+}

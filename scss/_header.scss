@@ -1,0 +1,108 @@
+header {
+  position: fixed;
+  padding: 0 30px;
+  height: 70px;
+  width: 100%;
+  @include flex-center(center, space-between, row);
+  z-index: 10;
+
+  // menu bar
+  .menu-bar {
+    padding: 20px 10px;
+    transition: transform 0.1s linear;
+
+    // center bar
+    .bar {
+      position: relative;
+      height: 3px;
+      width: 35px;
+      border-radius: 50px;
+      background: $white;
+      pointer-events: none;
+      transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+      // top bar
+      &::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        right: 0;
+        height: 3px;
+        width: 25px;
+        border-radius: 50px;
+        background: $white;
+        transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      // bottom bar
+      &::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        height: 3px;
+        width: 25px;
+        border-radius: 50px;
+        background: $white;
+        transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      // active
+      &_active_bar {
+        background: transparent;
+
+        &::before {
+          width: 35px;
+          transform: rotate(45deg) translate(4px, 7px);
+          background: $white;
+        }
+
+        &::after {
+          width: 35px;
+          transform: rotate(-45deg) translate(4px, -7px);
+          background: $white;
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------------
+
+// nav
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: $sandal;
+  @include flex-center(center, center, row);
+  clip-path: circle(0% at 96% 5%);
+  transition: all 0.5s ease-in-out;
+  z-index: 9;
+
+  // ul
+  ul {
+    line-height: 60px;
+
+    li {
+      text-align: left;
+      a {
+        font-weight: 800;
+        color: $white;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+          -webkit-text-stroke: 1px $white;
+          -webkit-text-fill-color: $sandal;
+          color: $sandal;
+        }
+      }
+    }
+  }
+
+  &._active {
+    clip-path: circle(150.1% at 96% 5%);
+  }
+}
