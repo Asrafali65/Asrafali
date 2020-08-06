@@ -95,3 +95,11 @@ function distort() {
 }
 
 distort();
+
+// skills
+
+const percentage = document.querySelectorAll(".percent");
+
+percentage.forEach((eachPercent) => {
+  eachPercent.style.width = eachPercent.getAttribute("data-skill");
+});

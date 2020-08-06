@@ -40,12 +40,11 @@
       margin-top: 30px;
 
       // scroll text
-    .scroll-txt {
-
-      h1 {
-        left: 800px;
+      .scroll-txt {
+        h1 {
+          left: 800px;
+        }
       }
-    }
       .about-me-container {
         grid-template-columns: 1fr;
 
@@ -77,6 +76,23 @@
             .title-portfolio {
               font-size: 2rem;
             }
+          }
+        }
+      }
+    }
+
+    .skill-container {
+      // skills
+      .skills {
+        grid-template-columns: 1fr;
+
+        .skill-name {
+          p {
+            font-size: 1.2rem;
+          }
+
+          .outer-wrapper-skill {
+            width: 200px;
           }
         }
       }
@@ -169,6 +185,13 @@
       .main-img {
         width: 300px;
         justify-self: end;
+      }
+    }
+
+    .skill-container {
+      // skills
+      .skills {
+        grid-template-columns: 1fr;
       }
     }
   }

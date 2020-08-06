@@ -1,7 +1,7 @@
 main {
   position: relative;
   top: 70px;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   min-height: 100vh;
 
@@ -189,6 +189,49 @@ main {
             .codepen-links {
               color: $sandal;
             }
+          }
+        }
+      }
+    }
+  }
+
+  .skill-container {
+    h1 {
+      text-align: center;
+      margin: 40px 0;
+    }
+    // skills
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      align-items: center;
+      justify-items: center;
+
+      .skill-name {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+
+        p {
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin: 10px 0;
+          justify-self: left;
+        }
+
+        .outer-wrapper-skill {
+          margin: 10px 0;
+          width: 250px;
+          height: 15px;
+          background: $black-shade;
+          border-radius: 50px;
+          overflow: hidden;
+
+          .percent {
+            height: 100%;
+            background: $sandal;
           }
         }
       }
